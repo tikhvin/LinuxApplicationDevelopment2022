@@ -39,7 +39,7 @@ test: prog prog-a prog-so
 	cmp $@-$(word 2, $^).txt $@-$(word 3, $^).txt
 	
 README: prog prog-a prog-so
-	>z $@
+	> $@
 	for program in $^ ; do \
 		if [ $$program != "prog-so" ] ; then \
 			./$$program 2>> $@ ; \
