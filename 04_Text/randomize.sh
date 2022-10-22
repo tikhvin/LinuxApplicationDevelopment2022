@@ -26,7 +26,7 @@ tput clear
 for triplet in $(shuf -e "${triplets[@]}") ; do
 	row=$(echo $triplet | cut -f1 -d "-")
 	column=$(echo $triplet | cut -f2 -d "-")
-	character=$(echo $triplet | cut -f3 -d "-")
+	character=${triplet: -1}
 	tput cup $row $column
 	echo -ne $character
 	sleep $time
