@@ -1,4 +1,4 @@
-Show:	Show.c
+Show: Show.c
 	cc Show.c -o Show -lncurses
 
 clean:
