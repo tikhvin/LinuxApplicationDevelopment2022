@@ -1,0 +1,12 @@
+set $counter = 0
+
+break range.c:7 if 27 <= $counter++ && $counter <= 35
+
+command 1
+	silent
+	printf "@@@ %ld %ld %ld %ld\n", start, finish, step, i
+	continue
+end
+
+run -100 100 3 > /dev/null 2>&1
+quit
