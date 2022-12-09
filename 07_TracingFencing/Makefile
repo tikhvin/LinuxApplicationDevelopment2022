@@ -1,4 +1,4 @@
-GENERATES = move fake_remove.so *.txt
+GENERATES = move fake_remove.so
 CFLAGS = -Wall
 
 all: move fake_remove.so tests
